@@ -39,6 +39,7 @@ import 'package:elastic_dashboard/widgets/nt_widgets/single_topic/number_bar.dar
 import 'package:elastic_dashboard/widgets/nt_widgets/single_topic/number_slider.dart';
 import 'package:elastic_dashboard/widgets/nt_widgets/single_topic/radial_gauge.dart';
 import 'package:elastic_dashboard/widgets/nt_widgets/single_topic/single_color_view.dart';
+import 'package:elastic_dashboard/widgets/nt_widgets/single_topic/reef_widget.dart';
 import 'package:elastic_dashboard/widgets/nt_widgets/single_topic/text_display.dart';
 import 'package:elastic_dashboard/widgets/nt_widgets/single_topic/toggle_button.dart';
 import 'package:elastic_dashboard/widgets/nt_widgets/single_topic/toggle_switch.dart';
@@ -132,6 +133,14 @@ class NTWidgetBuilder {
         model: TextDisplayModel.new,
         widget: TextDisplay.new,
         fromJson: TextDisplayModel.fromJson);
+
+
+    register(
+        name: Reef.widgetType,
+        model: ReefModel.new,
+        widget: Reef.new,
+        fromJson: ReefModel.fromJson
+    );
 
     register(
         name: VoltageView.widgetType,
